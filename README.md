@@ -4,7 +4,8 @@
 ## 使用方法
 `sh work_major.sh`
 ## 其中文件格式
-samp_genotype:
+文件: samp_genotype
+第一列是样本名，后面每一列是一个位点，位点名字可以更改
 | samp | K000754 | K000782 | SNPY3 | SNPY4 | SNPY5 | K000783 |
 |------|---------|---------|-------|-------|-------|---------|
 | 0    | T:C     | G:G     | C:C   | G:G   | G:G   | A:A     |
@@ -14,10 +15,10 @@ samp_genotype:
 | 4    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 6    | T:T     | G:G     | C:C   | G:G   | G:G   | A:A     |
 
-
-
 <br><br><br>
-samp_pheno:
+
+文件: samp_pheno
+第一列是样本名，第二列是表型名，一次分析只能一个表型
 | samp | leaf_numbers |
 |------|--------------|
 | 1    | 29           |
