@@ -18,17 +18,14 @@ samp_pheno:
 <details>
 <summary>点击展开</summary>
 samp_pheno:
-samp    leaf_numbers
-1       29
-2       31
-3       27
-4       31
+samp    leaf_numbers                                                                                               
+1       29                                                                                                         
+2       31                                                                                                         
+3       27                                                                                                         
+4       31                                                                                                         
 5       30
 6       36
 7       33
-.
-.
-.
 </details>
 
 ## 所需环境
