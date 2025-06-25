@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>分子标记分析报告</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+            line-height: 1.6;
+        }
+        .control-panel {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f5f7fa;
+            border-radius: 5px;
+        }
+        select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+        }
+        .section {
+            margin: 25px 0;
+            padding: 15px;
+            border: 1px solid #e1e4e8;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .caption {
+            background: #f8f9fa;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4285f4;
+            font-size: 14px;
+        }
+        .caption p {
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f6ff;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: #202124;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>分子标记统计分析报告</h1>
+<!-- 新增正文区域 -->
+    <section class="report-intro">
+        <ul>
+            <li>单因素方差分析是一种用于比较三个或更多组的均值是否存在显著差异的统计方法，适用于单一分类变量（自变量）对连续型因变量的影响分析。</li>
+            <li>Tukey HSD（Honestly Significant Difference，真实显著差异）检验是用于<200c>多重比较<200c>的统计方法>，专门解决ANOVA（方差分析）后多组间两两比较的假阳性问题。</li>
+        </ul>
+    </section>
+<!-- 其余代码保持不变 -->
+    
+    <div class="control-panel">
+        <select id="sample-select" onchange="switchSample()">
+            <option value="">-- 请选择分子标记名称 --</option>
+            <option value="K000754">K000754</option><option value="K000782">K000782</option><option value="K000783">K000783</option><option value="SNPY3">SNPY3</option><option value="SNPY4">SNPY4</option><option value="SNPY5">SNPY5</option>
+        </select>
+    </div>
+
+    
+        <div id="K000754-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - K000754</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>845</td><td>1.266e+00</td><td>2.826e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - K000754</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>CC</td><td>TC</td><td>6.307e+01</td><td>6.308e+01</td><td>-1.420e-02</td><td>9.000e-01</td></tr> <tr><td>CC</td><td>TT</td><td>6.307e+01</td><td>6.406e+01</td><td>-9.969e-01</td><td>3.974e-01</td></tr> <tr><td>TC</td><td>TT</td><td>6.308e+01</td><td>6.406e+01</td><td>-9.827e-01</td><td>2.918e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - K000754</h3>
+                <img src="ANOVA_stat/K000754/K000754_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+        <div id="K000782-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - K000782</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>837</td><td>1.252e+00</td><td>2.865e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - K000782</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>AA</td><td>GA</td><td>6.268e+01</td><td>6.318e+01</td><td>-5.044e-01</td><td>7.113e-01</td></tr> <tr><td>AA</td><td>GG</td><td>6.268e+01</td><td>6.390e+01</td><td>-1.217e+00</td><td>2.610e-01</td></tr> <tr><td>GA</td><td>GG</td><td>6.318e+01</td><td>6.390e+01</td><td>-7.130e-01</td><td>5.228e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - K000782</h3>
+                <img src="ANOVA_stat/K000782/K000782_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+        <div id="K000783-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - K000783</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>837</td><td>8.339e-01</td><td>4.347e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - K000783</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>AA</td><td>AT</td><td>6.369e+01</td><td>6.330e+01</td><td>3.812e-01</td><td>8.125e-01</td></tr> <tr><td>AA</td><td>TT</td><td>6.369e+01</td><td>6.270e+01</td><td>9.866e-01</td><td>4.109e-01</td></tr> <tr><td>AT</td><td>TT</td><td>6.330e+01</td><td>6.270e+01</td><td>6.054e-01</td><td>6.212e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - K000783</h3>
+                <img src="ANOVA_stat/K000783/K000783_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+        <div id="SNPY3-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - SNPY3</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>845</td><td>7.654e-01</td><td>4.654e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - SNPY3</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>CC</td><td>CT</td><td>6.384e+01</td><td>6.321e+01</td><td>6.241e-01</td><td>5.987e-01</td></tr> <tr><td>CC</td><td>TT</td><td>6.384e+01</td><td>6.292e+01</td><td>9.188e-01</td><td>4.578e-01</td></tr> <tr><td>CT</td><td>TT</td><td>6.321e+01</td><td>6.292e+01</td><td>2.947e-01</td><td>8.881e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - SNPY3</h3>
+                <img src="ANOVA_stat/SNPY3/SNPY3_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+        <div id="SNPY4-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - SNPY4</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>846</td><td>8.256e-01</td><td>4.383e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - SNPY4</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>CC</td><td>GC</td><td>6.283e+01</td><td>6.330e+01</td><td>-4.692e-01</td><td>7.369e-01</td></tr> <tr><td>CC</td><td>GG</td><td>6.283e+01</td><td>6.382e+01</td><td>-9.932e-01</td><td>4.063e-01</td></tr> <tr><td>GC</td><td>GG</td><td>6.330e+01</td><td>6.382e+01</td><td>-5.239e-01</td><td>6.886e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - SNPY4</h3>
+                <img src="ANOVA_stat/SNPY4/SNPY4_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+        <div id="SNPY5-content" class="sample-content" style="display:none">
+            <div class="table-section">
+                <h3>ANOVA分析结果 - SNPY5</h3>
+                <table>                                                                                                                <tr><td>Source</td><td>ddof1</td><td>ddof2</td><td>F</td><td>p-unc</td></tr> <tr><td>group</td><td>2</td><td>843</td><td>1.002e+00</td><td>3.677e-01</td></tr>                                                                                </table>                                    
+                <div class="caption">
+                    <p><strong>表1：单因素方差分析结果</strong></p>
+                    <p style="white-space: pre-line">Source :变异来源  : "group":（组间变异）,"Residual"或"Error":(未被解释的随机变异),"Total":(整体变异)
+    ddof1  :组间自由度: 自由度=分组数-1 : 值为2 代表3个分组
+    ddof2  :组内自由度: 自由度=组内自由度+组间自由度+1 ：值为845 表示总样本量为845,反映独立信息量
+    F      :F统计量   : 组间组内方差比 : 值为58,则表示组间方差是组内方差的58倍
+    p-unc  :未校正p值 : 结果是偶然发生的概率(无效假设)，P值远小于常规阈值0.05 : 拒绝假设
+</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>TukeyHSD检验结果 - SNPY5</h3>
+                <table>
+                    <tr><td>A</td><td>B</td><td>mean(A)</td><td>mean(B)</td><td>diff</td><td>p-tukey</td><td>sig</td></tr> <tr><td>AA</td><td>GA</td><td>6.271e+01</td><td>6.329e+01</td><td>-5.869e-01</td><td>6.353e-01</td></tr> <tr><td>AA</td><td>GG</td><td>6.271e+01</td><td>6.380e+01</td><td>-1.092e+00</td><td>3.348e-01</td></tr> <tr><td>GA</td><td>GG</td><td>6.329e+01</td><td>6.380e+01</td><td>-5.048e-01</td><td>7.034e-01</td></tr>
+                </table>
+                <div class="caption">
+                    <p><strong>表2：多重比较检验结果</strong></p>
+                    <p style="white-space: pre-line">A       : 第一个比较组名
+    B       : 第二个比较组名,AB先后顺序无影响
+    mean(A) : 第一组均值
+    mean(B) : 第二组均值
+    diff    : 组间均值差
+    p-tukey : 校正后P值,通过Tukey方法调整多重比较的显著性
+    sig     : 显著性标记 p < 0.01（高度显著**）p < 0.05（显著*）</p>
+                </div>
+            </div>
+
+            <div class="img-section">
+
+                <h3>组间比较图 - SNPY5</h3>
+                <img src="ANOVA_stat/SNPY5/SNPY5_group_comparison.png" style="max-width:600px">
+                <div class="caption">
+                    <p><strong>图1：组间均值比较</strong></p>
+                    <p style="white-space: pre-line">X轴：分组类别；Y轴：表型值均值；误差线：95%置信区间；图中标注F统计量和p值</p>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        function switchSample() {
+            const sel = document.getElementById('sample-select');
+            document.querySelectorAll('.sample-content').forEach(el => {
+                el.style.display = 'none';
+            });
+            if (sel.value) {
+                document.getElementById(sel.value + '-content').style.display = 'block';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const first = document.querySelector('.sample-content');
+            if (first) {
+                first.style.display = 'block';
+                document.getElementById('sample-select').value = first.id.replace('-content', '');
+            }
+        });
+    </script>
+</body>
+</html>

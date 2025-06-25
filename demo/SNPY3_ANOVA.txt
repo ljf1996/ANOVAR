@@ -1,0 +1,2 @@
+Source	ddof1	ddof2	F	p-unc
+group	2	845	7.654e-01	4.654e-01
