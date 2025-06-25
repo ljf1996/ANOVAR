@@ -13,6 +13,9 @@ samp_genotype:
 | 3    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 4    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 6    | T:T     | G:G     | C:C   | G:G   | G:G   | A:A     |
+
+
+
 <br><br><br>
 samp_pheno:
 | samp | leaf_numbers |
