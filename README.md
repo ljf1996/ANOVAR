@@ -15,7 +15,7 @@
 | 4    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 6    | T:T     | G:G     | C:C   | G:G   | G:G   | A:A     |
 
-<br><br><br>
+<br>
 
 文件: samp_pheno
 第一列是样本名，第二列是表型名，一次分析只能一个表型
