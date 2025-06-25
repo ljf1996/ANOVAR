@@ -14,9 +14,10 @@ samp_genotype:
 | 4    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 6    | T:T     | G:G     | C:C   | G:G   | G:G   | A:A     |
 
-samp_pheno:
-<details>
-<summary>点击展开</summary>
+
+
+
+
 samp_pheno:
 samp    leaf_numbers                                                                                               
 1       29                                                                                                         
@@ -26,9 +27,8 @@ samp    leaf_numbers
 5       30
 6       36
 7       33
-</details>
-
-## 所需环境
+<details>                                                                                                          
+<summary>所需软件和环境配置</summary>
 其中，pipline所需的python模块和R包需要配置，使用conda都能配
-
+</details>
 
