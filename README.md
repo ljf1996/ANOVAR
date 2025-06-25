@@ -5,8 +5,6 @@
 `sh work_major.sh`
 ## 其中文件格式
 samp_genotype:
-<details>
-<summary>点击展开</summary>
 | samp | K000754 | K000782 | SNPY3 | SNPY4 | SNPY5 | K000783 |
 |------|---------|---------|-------|-------|-------|---------|
 | 0    | T:C     | G:G     | C:C   | G:G   | G:G   | A:A     |
@@ -15,10 +13,6 @@ samp_genotype:
 | 3    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 4    | T:C     | G:A     | C:T   | G:C   | G:A   | A:T     |
 | 6    | T:T     | G:G     | C:C   | G:G   | G:G   | A:A     |
-.
-.
-.
-</details>
 
 samp_pheno:
 <details>
